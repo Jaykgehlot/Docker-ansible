@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local 
+  become: true
+  tasks:
+  - name: building docker image
+    command: docker build -t jay /home/jay/Desktop/DockerFiles
+
+  - name: creating docker image
+    command: docker run -d -p 80:80 jay
