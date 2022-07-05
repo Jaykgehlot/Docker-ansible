@@ -8,7 +8,7 @@ pipeline {
         }
         stage('ansible Deploy') {
             steps {
-                sh "ansible-playbook dockerimm.yml"               
+                sh "sudo ansible-playbook dockerimm.yml"               
             }
         }        
     }
