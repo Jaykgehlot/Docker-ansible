@@ -4,6 +4,6 @@
   become: true
   tasks:
   - name: building docker image
-    command: docker build -t jay DockerFiles/Dockerfile
+    command: docker build -t jay /DockerFiles/Dockerfile
   - name: creating docker image
     command: docker run -d -p 80:80 jay
